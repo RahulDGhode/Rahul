@@ -1,0 +1,73 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Doctors List</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        h1 {
+            color: #8d4949;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            border: 1px solid #a17d7d;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #7474d6;
+        }
+        
+        th {
+            background-color: #5b1297;
+            font-weight: bold;
+        }
+        
+        tr:hover {
+            background-color: #4fa818;
+        }
+    </style>
+</head>
+<body>
+    <h1>Doctors List</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Mobile Number</th>
+                <th>Role</th>
+                <th>Date of Birth</th>
+                <th>Salary</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <c:forEach var="doctor" items="${doctors}">
+                <tr>
+                    <td><c:out value="${doctor.id}" /></td>
+                    <td><c:out value="${doctor.name}" /></td>
+                    <td><c:out value="${doctor.mobileNumber}" /></td>
+                    <td><c:out value="${doctor.role}" /></td>
+                    <td><c:out value="${doctor.dob}" /></td>
+                    <td><c:out value="${doctor.salary}" /></td>
+                    <td><c:out value="${doctor.notes}" /></td>
+                </tr>
+            </c:forEach>
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,121 @@
+ 
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .medicine-info {
+      margin-top: 20px;
+    }
+    
+    .medicine-info label {
+      font-weight: bold;
+    }
+    
+    .medicine-info p {
+      margin: 5px 0;
+    }
+    
+    .medicine-info .row {
+      display: flex;
+      align-items: center;
+    }
+    
+    .medicine-info .row .medicine-name {
+      flex: 1;
+    }
+    
+    .medicine-info .row .medicine-takes {
+      flex: 1;
+      text-align: right;
+    }
+    
+    .tonic-info {
+      margin-top: 20px;
+    }
+    
+    .tonic-info label {
+      font-weight: bold;
+    }
+    
+    .tonic-info p {
+      margin: 5px 0;
+    }
+    
+    .amount-info {
+      margin-top: 20px;
+      text-align: center;
+    }
+    
+    .amount-info label {
+      font-weight: bold;
+    }
+    
+    .form-container {
+      margin-top: 20px;
+    }
+    
+    .form-container label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    
+    .form-container input[type="text"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+    
+    .form-container button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+   
+  
+  <div class="form-container">
+    <h2>Add Medicine Information</h2>
+    <form action="addMedicine" method="post" id="medicineForm">
+      <label for="firstMedicineInput">First Medicine:</label>
+      <input type="text" id="firstMedicineInput" name="firstMedicine">
+      
+      <label for="firstMedicineTakesInput">Takes:</label>
+      <input type="text" id="firstMedicineTakesInput" name="firstMedicineTakes">
+      
+      <label for="secondMedicineInput">Second Medicine:</label>
+      <input type="text" id="secondMedicineInput" name="secondMedicine">
+      
+      <label for="secondMedicineTakesInput">Takes:</label>
+      <input type="text" id="secondMedicineTakesInput" name="secondMedicineTakes">
+      
+      <label for="thirdMedicineInput">Third Medicine:</label>
+      <input type="text" id="thirdMedicineInput" name="thirdMedicine">
+      
+      <label for="thirdMedicineTakesInput">Takes:</label>
+      <input type="text" id="thirdMedicineTakesInput" name="thirdMedicineTakes">
+      
+      <label for="tonicInput">Tonic:</label>
+      <input type="text" id="tonicInput" name="tonic">
+      
+      <label for="totalAmountInput">Total Amount:</label>
+      <input type="text" id="totalAmountInput" name="totalAmount">
+      
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>
